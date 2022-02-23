@@ -26,7 +26,7 @@ Create a new game passing in the letters you want to make up the board<br>
           duration: 1000<br>
         }<br>
         <br>
-- Headers: {<br>Authorisation: "Token <token>"<br>}<br>
+- Headers: {<br>Authorisation: "Token ejgd4eev"<br>}<br>
           <br>
  Returns: {<br>
              "message": "Successfully created a new game"<br>
@@ -38,7 +38,7 @@ Create a new game passing in the letters you want to make up the board<br>
 Get the game details before you play!<br>
 - URL: https://saleswhale-boggle.herokuapp.com/game/1<br>
 - Params: Game id<br>
-- Headers: {<br>Authorisation: "Token <token>"<br>}<br>
+- Headers: {<br>Authorisation: "Token eareg4sva"<br>}<br>
           <br>
 <br>
 Returns: {<br>
@@ -62,7 +62,7 @@ Start playing the game now!<br>
 - URL: https://saleswhale-boggle.herokuapp.com/game/1<br>
 - Params: Game ID <br>
 - Body: {<br> word: "hit"<br>}<br>
-- Headers: {<br>Authorisation: "Token <token>"<br>}<br>
+- Headers: {<br>Authorisation: "Token ewfv34asve"<br>}<br>
           <br>
 
 <br>
