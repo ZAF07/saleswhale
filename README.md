@@ -4,7 +4,7 @@
 <h3>1) Create a user</h3>
 This would return you a token to use to authenticate yourself <br>
 - URL: [POST] https://saleswhale-boggle.herokuapp.com/user/create-account
-- Body: { <br>
+- Body: <br>{ <br>
           user: James,<br>
           password: 1234<br>
         }<br>
