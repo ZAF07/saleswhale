@@ -13,8 +13,6 @@ const playGame = (db,cache) => {
     const getGame= await db.getGame(id);
     if (getGame) {
       const { duration, board, points, timeRemaining } = getGame;
-      // console.log('GAME DETAILS : ', gameDetails);
-      // const b = 'atmenhkpjiorsvdb';
       let gameBoard;
       gameBoard = board
       if (!board) {

@@ -15,10 +15,6 @@ const initGameService = () => {
  gameServices.CreateGame = CreateGame(db, cache);
  gameServices.GetGame = GetGame(db, cache);
  gameServices.PlayGame = PlayGame(db, cache);
-//  gameSevices.Login = Login(db, cache);
-//  gameSevices.GetUsers = GetUsers(db, cache);
-//  gameSevices.Logout = Logout(db, cache);
-//  gameSevices.RefreshToken = RefreshToken(db, cache);
 
  return gameServices;
 }
