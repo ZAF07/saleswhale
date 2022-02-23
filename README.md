@@ -19,14 +19,14 @@ This would return you a token to use to authenticate yourself <br>
 
 <h3>2) Create a new game</h3>
 Create a new game passing in the letters you want to make up the board<br>
-<li>URL [POST] https://saleswhale-boggle.herokuapp.com/game<li><br>
+<li>URL [POST] https://saleswhale-boggle.herokuapp.com/game</li><br>
 <li>Body: {<br>
           random: true,<br>
           board: 'abcdefghijklmnop',<br>
           duration: 1000<br>
         }</li><br>
         <br>
-<li>Headers: {<br>Authorisation: "Token ejgd4eev"<br>}<li><br>
+<li>Headers: {<br>Authorisation: "Token ejgd4eev"<br>}</li><br>
           <br>
  <li>Returns: {<br>
              "message": "Successfully created a new game"<br>
