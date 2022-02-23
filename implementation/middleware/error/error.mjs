@@ -20,6 +20,10 @@ export default (err, _, res, next) => {
       createErrorMsg(401, err.message, res)
     case 'invalid auth':
       createErrorMsg(401, err.message, res)
+    case 'invalid signature':
+      createErrorMsg(401, err.message, res)
+    case 'Invalid token':
+      createErrorMsg(401, err.message, res)
     default:
       res.status(500).send('Some Error occured')
       break;

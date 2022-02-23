@@ -18,7 +18,7 @@ const getDetailsForLetter = (letter, boggle) => {
       if (letter === boggle[r][c]) {   // First letter indext at : [0,1]
         console.log(`[getDetailsForLetter] Here are the details for the letter :  Letter: ${boggle[r][c]},  row: ${r}, column: ${c}`);
         details.push({ letter: `${boggle[r][c]}`, row: r, column: c })
-      }
+      } 
     }
   }
   return details;
@@ -78,8 +78,9 @@ const checkValidMoves = (currentLetter, nextLetter) => {
     // Loop the given letters and run validation checks
     for (let i = 0; i < letters.length; i++) {
       const letterDetails = getDetailsForLetter(letters[i], boggle);
+      console.log('CHECK IF EXISTS : ', letterDetails);
       // word does not exist in board
-      if (!letterDetails) {
+      if (letterDetails.length < 1) {
         console.log('word does not exist in board');
         return { valid: false, reason: 'Word does not exist in board' }
       }
