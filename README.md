@@ -2,9 +2,9 @@
 
 <h1>Follow this guide on how to get started with the game </h1>
 <h3>1) Create a user</h3>
-This would return you a token to use to authenticate yourself
+This would return you a token to use to authenticate yourself <br>
 - URL: [POST] https://saleswhale-boggle.herokuapp.com/user/create-account
-- Body: {
+- Body: { \n
           user: James,
           password: 1234
         }
