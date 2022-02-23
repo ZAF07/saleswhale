@@ -18,14 +18,14 @@ Returns: {<br>
 
 <h3>2) Create a game with</h3>
 Create a new game passing in the letters you want to make up the board
-- URL [POST] https://saleswhale-boggle.herokuapp.com/game
-- Body: {
-          random: true,
-          board: 'abcdefghijklmnop',
-          duration: 1000
-        }
+- URL [POST] https://saleswhale-boggle.herokuapp.com/game<br>
+- Body: {<br>
+          random: true,<br>
+          board: 'abcdefghijklmnop',<br>
+          duration: 1000<br>
+        }<br>
 
 <h3>Get a game</h3>
 Get the game details before you play!
-- URL: https://saleswhale-boggle.herokuapp.com/game/1
-- Params: Game id
+- URL: https://saleswhale-boggle.herokuapp.com/game/1<br>
+- Params: Game id<br>
