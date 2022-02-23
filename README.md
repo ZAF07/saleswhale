@@ -58,3 +58,21 @@ Start playing the game now!<br>
 - URL: https://saleswhale-boggle.herokuapp.com/game/1<br>
 - Params: Game ID <br>
 - Body: {<br> word: "hit"<br>}<br>
+
+<br>
+Returns: {<br>
+    "message": "Playing game",<br>
+    "status": 200,<br>
+    "data": {<br>
+        "results": {<br>
+            "valid": true,<br>
+            "points": 1<br>
+        },<br>
+        "details": {<br>
+            "duration": 1000,<br>
+            "timeRemaining": 997,<br>
+            "board": "p*yobanijdfudiet",<br>
+            "token": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6InphZmZlcmUiLCJpYXQiOjE2NDU2MTg0MTN9.CRfnELaYTomGrue3LvZMSc1X8bSvNx1LehDElIHJgyw"<br>
+        }<br>
+    }<br>
+}<br>
