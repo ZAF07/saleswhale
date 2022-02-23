@@ -50,7 +50,7 @@ Get the game details before you play!<br>
         "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6InphZmZlcmUiLCJpYXQiOjE2NDU2MTg0MTN9.CRfnELaYTomGrue3LvZMSc1X8bSvNx1LehDElIHJgyw",<br>
         "board": "ahdyueb*fuschdkjsj",<br>
         "duration": 1000,<br>
-        "timeRemaining": 995,<br>
+        "timeRemaining": 1000,<br>
         "points": 3,<br>
         "createdAt": "2022-02-23",<br>
         "updatedAt": "2022-02-23"<br>
