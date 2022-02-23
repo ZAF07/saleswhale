@@ -18,7 +18,7 @@ const generateToken = ({ id, name, password }, type) => {
     case 'pair':
       console.log('GENERATING TOKEN');
       // Sign token with userName and password, return JWT in header
-      const token = sign(payload, secret, { expiresIn: '10m' });
+      const token = sign(payload, secret, { expiresIn: '30m' });
       const refreshToken = sign(payload, secret);
       // Store refresh token in cache
       return { token, refreshToken };

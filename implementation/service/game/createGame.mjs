@@ -6,7 +6,7 @@ const CreateGame = (db, cache) => {
     console.log('USER TOKEN FROM MIDDLEWARE : ', id, name);
     const { random, duration, board } = req.body;
     console.log('REQ BODY: ', random, duration, board);
-
+    let gameBoard = board;
     const payload = {
       id,
       name
@@ -14,8 +14,12 @@ const CreateGame = (db, cache) => {
     // Generate token to authenticate game
     const token = generateToken(payload, 'game');
     console.log('game token ?? : ', token);
+
+    if (random) {
+      gameBoard = 'tap*eaksobrss*xd'
+    }
     
-    const newGameDetails = { userId: id, board, duration, token, timeRemaining: duration, points: 0 }
+    const newGameDetails = { userId: id, board: gameBoard, duration, token, timeRemaining: duration, points: 0 }
     const newGame = await db.createGame(newGameDetails);
 
     res.status(200).json({

@@ -18,6 +18,8 @@ export default (err, _, res, next) => {
       break;
     case _ERR_STATUS[4005]:
       createErrorMsg(401, err.message, res)
+    case 'invalid auth':
+      createErrorMsg(401, err.message, res)
     default:
       res.status(500).send('Some Error occured')
       break;

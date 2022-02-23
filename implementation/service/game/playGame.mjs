@@ -15,7 +15,12 @@ const playGame = (db,cache) => {
       const { duration, board, points, timeRemaining } = getGame;
       // console.log('GAME DETAILS : ', gameDetails);
       // const b = 'atmenhkpjiorsvdb';
-      const game = playBoggle(word, '');
+      let gameBoard;
+      gameBoard = board
+      if (!board) {
+        gameBoard = ''
+      }
+      const game = playBoggle(word, gameBoard);
       console.log('GAME RESULT : ', game.valid);
   
       //  IF VALID, UPDATE DATABASE TO REFLECT CHANGES
