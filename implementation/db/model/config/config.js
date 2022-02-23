@@ -6,12 +6,7 @@ module.exports = {
     host: '127.0.0.1',
     port: '5432',
     dialect: 'postgres',
-    dialectOptions: {
-      ssl: {
-        require: false,
-        rejectUnauthorized: false
-      },
-    }
+
   },
   production: {
     use_env_variable: 'DATABASE_URL',

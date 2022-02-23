@@ -46,7 +46,7 @@ const checkDuplicate = (word, letter) => {
 
 const generateDefaultBoard = () => {
   // let defaultBoard;
-  const defaultBoard = readFileSync('../test_board.txt', 'utf-8',(err, data) => {
+  const defaultBoard = readFileSync('test_board.txt', 'utf-8',(err, data) => {
     if (err) {
       throw new Error('Cannot read file')
     }
@@ -56,7 +56,7 @@ const generateDefaultBoard = () => {
 }
 
 const checkValidWord = (word) => {
-  const dictionary = readFileSync('../dictionary.txt', 'utf-8', (err, data) => {
+  const dictionary = readFileSync('dictionary.txt', 'utf-8', (err, data) => {
     if (err) {
       throw new Error('Cannot read dictionary.txt')
     }

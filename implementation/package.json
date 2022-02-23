@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.mjs",
   "scripts": {
-    "dev": "nodemon main.js"
+    "dev": "nodemon main.mjs",
+    "start": "node main.mjs"
   },
   "keywords": [],
   "author": "",

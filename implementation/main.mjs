@@ -7,7 +7,7 @@ import { stripLetter } from './utils/helpers/format/index.mjs';
 
 import userRouter from './router/user/index.mjs';
 import gameRouter from './router/game/index.mjs';
-
+console.log('correct');
 const app = express();
 app.use(express.json())
 app.use('/user', userRouter);
@@ -20,5 +20,5 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Some Error occured')
 })
-
-app.listen(3000, console.log('listening to http://localhost:3000'));
+const port = process.env.PORT || 3000;
+app.listen(port, console.log(`listening on ${port}`));

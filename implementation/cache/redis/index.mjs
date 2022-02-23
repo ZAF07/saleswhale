@@ -2,7 +2,7 @@ import { createClient } from 'redis';
 
 // Redis instance
 const connectRedis =  () => {
-const Redis = createClient({url: 'redis://172.24.0.2:6379'});
+const Redis = createClient({url: process.env.REDIS_URL});
   Redis.connect()
     .then(() => {
       console.log('Connected redis');
