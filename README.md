@@ -3,11 +3,11 @@
 <h1>Follow this guide on how to get started with the game </h1>
 <h3>1) Create a user</h3>
 This would return you a token to use to authenticate yourself <br>
-- <li>URL: [POST] https://saleswhale-boggle.herokuapp.com/user/create-account</li><br>
-- Body: <br>{ <br>
+<li>URL: [POST] https://saleswhale-boggle.herokuapp.com/user/create-account</li><br>
+<li>Body: <br>{ <br>
           user: James,<br>
           password: 1234<br>
-        }<br>
+        }</li><br>
         <br>
 Returns: {<br>
             "message": "Successfully created a new user",<br>
