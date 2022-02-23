@@ -11,7 +11,7 @@ console.log('correct');
 const app = express();
 app.use(express.json())
 app.use('/user', userRouter);
-app.use('/game', gameRouter);
+app.use('/games', gameRouter);
 app.use(errorMiddleware);
 
 // Error handler

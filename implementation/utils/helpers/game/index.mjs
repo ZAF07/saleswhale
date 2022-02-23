@@ -64,8 +64,6 @@ const checkValidMoves = (currentLetter, nextLetter) => {
     }
     // check if board was given, else generate default baord
     if (!board) {
-      // const defaultWords = generateDefaultBoard();
-      // board = defaultWords
       board = generateDefaultBoard()
       };
     const boggle = constructBoard(board);
