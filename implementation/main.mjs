@@ -1,9 +1,5 @@
 import express from 'express';
 import errorMiddleware from './middleware/error/error.mjs';
-// import {authorize} from './middleware/authenticate.js';
-import {dirname} from 'path';
-import {readFile} from 'fs';
-import { stripLetter } from './utils/helpers/format/index.mjs';
 
 import userRouter from './router/user/index.mjs';
 import gameRouter from './router/game/index.mjs';
