@@ -16,7 +16,6 @@ const RefreshToken = (_,cache) => {
     const { id, name, password } = res.locals;
     console.log('IN REFRESH : ', res.locals);
 
-      // const newToken = generateRefreshToken(user, password, 'refresh');
       const newToken = generateToken({ id, name, password }, 'single');
       console.log('NEW TOKEN', newToken);
       res.status(200).json({ message: 'Refresh Token Success', status: 200, token: newToken })

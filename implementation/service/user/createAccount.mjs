@@ -1,6 +1,3 @@
-// import { createUser } from '../../db/users/index.mjs';
-// import UserRepo from '../../db/users/index.mjs';
-// import { setUserToken } from '../../cache/redis/index.mjs';
 import generateToken from '../../utils/jwt/token.mjs';
 
 const CreateAccount = (db, cache) => {
