@@ -24,17 +24,18 @@ Create a new game passing in the letters you want to make up the board<br>
           board: 'abcdefghijklmnop',<br>
           duration: 1000<br>
         }<br>
+        <br>
  Returns: {<br>
              "message": "Successfully created a new game"<br>
              "status": 200<br>
              "game_id": 1<br>
           }<br>
 
-<h3>Get a game</h3>
+<h3>3) Get a game</h3>
 Get the game details before you play!<br>
 - URL: https://saleswhale-boggle.herokuapp.com/game/1<br>
 - Params: Game id<br>
-
+<br>
 Returns: {<br>
     "message": "Success",<br>
     "status": 200,<br>
