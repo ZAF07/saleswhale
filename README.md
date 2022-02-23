@@ -8,6 +8,7 @@ This would return you a token to use to authenticate yourself <br>
           user: James,<br>
           password: 1234<br>
         }<br>
+        <br>
 Returns: {<br>
             "message": "Successfully created a new user",<br>
             "status": 200,<br>
@@ -51,3 +52,9 @@ Returns: {<br>
         "updatedAt": "2022-02-23"<br>
     }<br>
 }<br>
+
+<h3>4) Play Game</h3>
+Start playing the game now!<br>
+- URL: https://saleswhale-boggle.herokuapp.com/game/1<br>
+- Params: Game ID <br>
+- Body: {<br> word: "hit"<br>}<br>
