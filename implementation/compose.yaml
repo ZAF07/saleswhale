@@ -1,0 +1,16 @@
+version: '3'
+services:
+  redis:
+    image: redis
+    container_name: redis_container
+
+  app:
+    image: s-con-25
+    container_name: boggle-container
+    ports:
+      - 3000:3000
+    depends_on:
+      - redis
+    environment:
+      - SECRET_TOKEN=1abbfc9ba55fc88284a7d835ec041b6d45951bf1299a01e3578e08fd4a8f9cc98b05b7687f9e8c72402c9a5f7b336c822458d638a17f64c833ac88949a34ec2d
+      - REDIS_URL=redis

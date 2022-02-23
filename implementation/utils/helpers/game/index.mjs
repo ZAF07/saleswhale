@@ -7,7 +7,6 @@ const getDetailsForLetter = (letter, boggle) => {
   const row = boggle.length;
   console.log(`Getting index of letter:  ${letter}`);
   let details = [];
-  let wildCard = [];
 
   // Get letter and scan the board for matching letter, return : letter, row/column coordinates
   // Each row
@@ -22,14 +21,11 @@ const getDetailsForLetter = (letter, boggle) => {
       }
     }
   }
-  if (wildCard.length > 0) {
-    return wildCard
-  }
   return details;
 };
 
 // Function to return all valid moves in array
-// Takes in an object with row and column coordinates ( Next word )
+// Takes in an array of object with row and column coordinates ( Current & Next letter )
 const checkValidMoves = (currentLetter, nextLetter) => {
   for (let i = 0; i < currentLetter.length; i ++) {
     const currentL = currentLetter[i] 
@@ -59,23 +55,20 @@ const checkValidMoves = (currentLetter, nextLetter) => {
   return false;
 }
   
-  // Main logic, loops through the given word
+  // Main logic, uses both functions above combined to run the game logic
   const playBoggle = (word, board) => {
     // Check if word is a valid english word
     const isValidWord = checkValidWord(word);
     if (!isValidWord) {
-      return {
-        valid: false,
-         reason: 'Not a valid word'
-      }
+      return { valid: false, reason: 'Not a valid word' }
     }
     // check if board was given, else generate default baord
     if (!board) {
-      const defaultWords = generateDefaultBoard();
-      board = defaultWords
+      // const defaultWords = generateDefaultBoard();
+      // board = defaultWords
+      board = generateDefaultBoard()
       };
     const boggle = constructBoard(board);
-    let isPlayerWin = true;
     console.time('start')
     // Temp store for retruned details of each letter
     const dict = []; 
@@ -83,27 +76,19 @@ const checkValidMoves = (currentLetter, nextLetter) => {
     console.log('PASSED LETTER : ', letters);
 
     // Loop the given letters and run validation checks
-    for (let o = 0; o < letters.length; o++) {
-    // letters.forEach(letter => {
-      const letterDetails = getDetailsForLetter(letters[o], boggle);
+    for (let i = 0; i < letters.length; i++) {
+      const letterDetails = getDetailsForLetter(letters[i], boggle);
       // word does not exist in board
       if (!letterDetails) {
         console.log('word does not exist in board');
-        return {
-          valid: false,
-          reason: 'Word does not exist in board'
-        }
+        return { valid: false, reason: 'Word does not exist in board' }
       }
       // Check if letter already exists in dict
       const isDuplicate = checkDuplicate(dict, letterDetails[0].letter)
 
       if (isDuplicate) {
         console.error('YUP THAT IS A DUPLICATE ');
-        isPlayerWin = false
-        return {
-          valid: false,
-          reason: 'Duplicate letter'
-        }
+        return { valid: false, reason: 'Duplicate letter' }
       }
       dict.push(letterDetails)
       console.log('[playBoggle] LETTER DETAILS : ', letterDetails);
@@ -119,23 +104,17 @@ const checkValidMoves = (currentLetter, nextLetter) => {
       }
       // Return if no word details ( means word does not exist on board)
       if (!dict[i] && dict[i+1]) {
-        isPlayerWin = false
-        return false
+        return { valid: false, reason: 'Word does not exists in board'}
       }
 
       const result = checkValidMoves(dict[i], dict[i+1]);
       if (result === false) {
-        return {
-          valid: false,
-          reason: 'Invalid coordinates'
-        }
+        return { valid: false, reason: 'Invalid coordinates' }
       }
     }
     console.log('-------------------------------------------');
     console.timeEnd('start');
-    return {
-      valid: true
-    }
+    return { valid: true }
   }
   export default playBoggle;
   /*
