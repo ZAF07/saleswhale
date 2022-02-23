@@ -9,39 +9,39 @@ This would return you a token to use to authenticate yourself <br>
           password: 1234<br>
         }</li><br>
         <br>
-Returns: {<br>
+<li>Returns: {<br>
             "message": "Successfully created a new user",<br>
             "status": 200,<br>
             "user": "zaffere",<br>
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",<br>
             "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."<br>
-}<br>
+}</li><br>
 
 <h3>2) Create a new game</h3>
 Create a new game passing in the letters you want to make up the board<br>
-- URL [POST] https://saleswhale-boggle.herokuapp.com/game<br>
-- Body: {<br>
+<li>URL [POST] https://saleswhale-boggle.herokuapp.com/game<li><br>
+<li>Body: {<br>
           random: true,<br>
           board: 'abcdefghijklmnop',<br>
           duration: 1000<br>
-        }<br>
+        }</li><br>
         <br>
-- Headers: {<br>Authorisation: "Token ejgd4eev"<br>}<br>
+<li>Headers: {<br>Authorisation: "Token ejgd4eev"<br>}<li><br>
           <br>
- Returns: {<br>
+ <li>Returns: {<br>
              "message": "Successfully created a new game"<br>
              "status": 200<br>
              "game_id": 1<br>
-          }<br>
+          }</li><br>
 
 <h3>3) Get a game</h3>
 Get the game details before you play!<br>
-- URL: https://saleswhale-boggle.herokuapp.com/game/1<br>
-- Params: Game id<br>
-- Headers: {<br>Authorisation: "Token eareg4sva"<br>}<br>
+<li>URL: https://saleswhale-boggle.herokuapp.com/game/1</li><br>
+<li>Params: Game id</li><br>
+<li>Headers: {<br>Authorisation: "Token eareg4sva"<br>}</li><br>
           <br>
 <br>
-Returns: {<br>
+<li>Returns: {<br>
     "message": "Success",<br>
     "status": 200,<br>
     "data": {<br>
@@ -55,18 +55,18 @@ Returns: {<br>
         "createdAt": "2022-02-23",<br>
         "updatedAt": "2022-02-23"<br>
     }<br>
-}<br>
+}</li><br>
 
 <h3>4) Play Game</h3>
 Start playing the game now!<br>
-- URL: https://saleswhale-boggle.herokuapp.com/game/1<br>
-- Params: Game ID <br>
-- Body: {<br> word: "hit"<br>}<br>
-- Headers: {<br>Authorisation: "Token ewfv34asve"<br>}<br>
+<li>URL: https://saleswhale-boggle.herokuapp.com/game/1</li><br>
+<li>Params: Game ID </li><br>
+<li>Body: {<br> word: "hit"<br>}</li><br>
+<li>Headers: {<br>Authorisation: "Token ewfv34asve"<br>}</li><br>
           <br>
 
 <br>
-Returns: {<br>
+<li>Returns: {<br>
     "message": "Playing game",<br>
     "status": 200,<br>
     "data": {<br>
@@ -81,4 +81,4 @@ Returns: {<br>
             "token": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OSwibmFtZSI6InphZmZlcmUiLCJpYXQiOjE2NDU2MTg0MTN9.CRfnELaYTomGrue3LvZMSc1X8bSvNx1LehDElIHJgyw"<br>
         }<br>
     }<br>
-}<br>
+}</li><br>
